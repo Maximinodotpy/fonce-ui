@@ -1,0 +1,27 @@
+@import "../variables"
+        
+/* Disappear */
+@each $name, $value in $breakpoints
+
+    /* Switch at class */
+    .switch-at-#{$name}
+        @media (min-width: $value + 0px)
+            >*:first-child
+                display: none
+            >*:last-child
+                display: unset
+        @media (max-width: $value + 0px)
+            >*:first-child
+                display: unset
+            >*:last-child
+                display: none
+
+    .appear-at-#{$name}
+        display: none
+        @media (min-width: $value + 0px)
+            display: unset
+
+    .hide-at-#{$name}
+        display: unset
+        @media (min-width: $value + 0px)
+            display: none

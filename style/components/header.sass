@@ -1,0 +1,8 @@
+$sizes: 250%, 180%, 130%, 120%, 120%, 110%
+
+$index: 1
+@each $size in $sizes
+    h#{$index}
+        font-size: $size
+
+    $index: $index + 1

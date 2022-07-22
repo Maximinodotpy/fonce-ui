@@ -1,0 +1,21 @@
+/* Same width Grid */
+$gridwidths: 2, 3, 4
+
+$gridgapnames: "", -narrow, -normal, -open
+$gridgapvalues: 0, 10px, 30px, 50px
+
+$gridgaps: zip($gridgapnames, $gridgapvalues)
+
+@each $grid in $gridwidths
+
+    @each $name, $value in $gridgaps
+
+    
+        .grid-#{$grid}#{$name}
+            display: grid
+            grid-template-columns: repeat($grid, 1fr)
+            gap: $value
+            
+            @media (max-width: 900px)
+                grid-template-columns: 100%
+                row-gap: 20px
