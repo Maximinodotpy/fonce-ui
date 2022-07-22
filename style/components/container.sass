@@ -1,4 +1,12 @@
-.container
-    width: clamp(45ch, 100%, 75ch)
-    margin: 0 auto
-    padding: 1em
+@import "../variables"
+
+@each $name, $value in $breakpoints
+    .container-#{$name}
+        padding: 1em
+        max-width: $value + 0px
+        margin: 0 auto
+
+
+/* 
+    usage: Use this class to make a responsive Container which stays in the middle of the parent element until a certain width.
+    html: lfkasjdflkasjd*/

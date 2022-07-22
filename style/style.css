@@ -48,6 +48,9 @@ table {
   border-spacing: 0;
 }
 
+/* 
+    usage: Simple Reset.css
+    html: lfkasjdflkasjd*/
 button {
   padding: 0.3em;
   border: none;
@@ -62,6 +65,8 @@ button:active {
   background-color: #353535;
 }
 
+/*  usage: You dont have to use anything, the rules make your buttons nice.
+ *  html: lfkasjdflkasjd*/
 /* Breakpoints */
 .background-main {
   background-color: rgb(45, 45, 45);
@@ -75,6 +80,12 @@ button:active {
   background-color: rgb(56, 95, 194);
 }
 
+.background-tertiary {
+  background-color: rgb(77, 77, 77);
+}
+
+/*  usage: Change the Background with these classes.
+ *  html: lfkasjdflkasjd*/
 /* Paddings and Margins */
 .m-0 {
   margin: 0em;
@@ -716,6 +727,8 @@ button:active {
   padding-right: 7em;
 }
 
+/*  usage: Margin and Padding Utility Classes
+ *  html: lfkasjdflkasjd*/
 /* Same width Grid */
 .grid-2 {
   display: grid;
@@ -861,6 +874,8 @@ button:active {
   }
 }
 
+/*  usage: Same Width Grids
+ *  html: lfkasjdflkasjd*/
 h1 {
   font-size: 250%;
 }
@@ -885,18 +900,45 @@ h6 {
   font-size: 110%;
 }
 
-.container {
-  width: clamp(45ch, 100%, 75ch);
-  margin: 0 auto;
+/*  usage: Header are being Sized
+ *  html: lfkasjdflkasjd*/
+/* Breakpoints */
+.container-small {
   padding: 1em;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
+.container-medium {
+  padding: 1em;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.container-large {
+  padding: 1em;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.container-xlarge {
+  padding: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*  usage: Use this class to make a responsive Container which stays in the middle of the parent element until a certain width.
+ *  html: lfkasjdflkasjd*/
 .card {
   background-color: rgb(60, 60, 60);
-  border-radius: 5px;
+}
+
+.card-shadow {
   box-shadow: 0 0 5px rgb(100, 100, 100);
 }
 
+/*  usage: Insert a Card with these classes that has a shadow.
+ *  html: lfkasjdflkasjd*/
 .position-absolute {
   position: absolute;
 }
@@ -922,6 +964,8 @@ h6 {
   bottom: 0;
 }
 
+/*  usage: Position Utility Class + Sticky Top for easy sticky headers
+ *  html: lfkasjdflkasjd*/
 /* Breakpoints */
 /* Disappear */
 /* Switch at class */
@@ -1068,6 +1112,8 @@ h6 {
   }
 }
 
+/*  usage: Let elements appear or disappear at certain screen widths.
+ *  html: lfkasjdflkasjd*/
 .flex {
   display: flex;
 }
@@ -1080,6 +1126,10 @@ h6 {
   align-items: center;
 }
 
+.flex-align-items-start {
+  align-items: flex-start;
+}
+
 .flex-directions-column {
   flex-direction: column;
 }
@@ -1088,44 +1138,60 @@ h6 {
   flex-grow: 1;
 }
 
+/*  usage: Utility Classes for flex Box
+ *  html: lfkasjdflkasjd*/
 /* Widths */
 .width-1-1 {
-  width: 100%;
+  width: 100% !important;
 }
 
 .width-1-2 {
-  width: 50%;
+  width: 50% !important;
 }
 
 .width-1-3 {
-  width: 33.3333333333%;
+  width: 33.3333333333% !important;
 }
 
 .width-1-4 {
-  width: 25%;
+  width: 25% !important;
 }
 
 .width-1-5 {
-  width: 20%;
+  width: 20% !important;
 }
 
 .width-1-6 {
-  width: 16.6666666667%;
+  width: 16.6666666667% !important;
 }
 
+/*  usage: Width Divisions
+ *  html: lfkasjdflkasjd*/
 a {
   color: rgb(84, 130, 245);
   text-decoration: none;
 }
 a:hover {
-  background-color: rgb(200, 200, 200);
+  text-decoration: underline;
   border-radius: 5px;
 }
 
+/*  usage: The links are styled
+ *  html: lfkasjdflkasjd*/
 * {
   box-sizing: border-box;
   color: rgb(240, 240, 240);
-  font-family: "Segoe UI", sans-serif !important;
+}
+
+:not(pre) {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.code, code, pre {
+  font-family: monospace;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
 }
 
 body {
