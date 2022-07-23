@@ -87,6 +87,166 @@ button:active {
 /*  usage: Change the Background with these classes.
  *  html: lfkasjdflkasjd*/
 /* Paddings and Margins */
+.m-0-2 {
+  margin: .2em;
+}
+
+.child-m-0-2 > * {
+  margin: .2em;
+}
+
+.p-0-2 {
+  padding: .2em;
+}
+
+.child-p-0-2 > * {
+  padding: .2em;
+}
+
+.mb-0-2 {
+  margin-bottom: .2em;
+}
+
+.child-mb-0-2 > * {
+  margin-bottom: .2em;
+}
+
+.pb-0-2 {
+  padding-bottom: .2em;
+}
+
+.child-pb-0-2 > * {
+  padding-bottom: .2em;
+}
+
+.mt-0-2 {
+  margin-top: .2em;
+}
+
+.child-mt-0-2 > * {
+  margin-top: .2em;
+}
+
+.pt-0-2 {
+  padding-top: .2em;
+}
+
+.child-pt-0-2 > * {
+  padding-top: .2em;
+}
+
+.ml-0-2 {
+  margin-left: .2em;
+}
+
+.child-ml-0-2 > * {
+  margin-left: .2em;
+}
+
+.pl-0-2 {
+  padding-left: .2em;
+}
+
+.child-pl-0-2 > * {
+  padding-left: .2em;
+}
+
+.mr-0-2 {
+  margin-right: .2em;
+}
+
+.child-mr-0-2 > * {
+  margin-right: .2em;
+}
+
+.pr-0-2 {
+  padding-right: .2em;
+}
+
+.child-pr-0-2 > * {
+  padding-right: .2em;
+}
+
+.m-0-5 {
+  margin: .5em;
+}
+
+.child-m-0-5 > * {
+  margin: .5em;
+}
+
+.p-0-5 {
+  padding: .5em;
+}
+
+.child-p-0-5 > * {
+  padding: .5em;
+}
+
+.mb-0-5 {
+  margin-bottom: .5em;
+}
+
+.child-mb-0-5 > * {
+  margin-bottom: .5em;
+}
+
+.pb-0-5 {
+  padding-bottom: .5em;
+}
+
+.child-pb-0-5 > * {
+  padding-bottom: .5em;
+}
+
+.mt-0-5 {
+  margin-top: .5em;
+}
+
+.child-mt-0-5 > * {
+  margin-top: .5em;
+}
+
+.pt-0-5 {
+  padding-top: .5em;
+}
+
+.child-pt-0-5 > * {
+  padding-top: .5em;
+}
+
+.ml-0-5 {
+  margin-left: .5em;
+}
+
+.child-ml-0-5 > * {
+  margin-left: .5em;
+}
+
+.pl-0-5 {
+  padding-left: .5em;
+}
+
+.child-pl-0-5 > * {
+  padding-left: .5em;
+}
+
+.mr-0-5 {
+  margin-right: .5em;
+}
+
+.child-mr-0-5 > * {
+  margin-right: .5em;
+}
+
+.pr-0-5 {
+  padding-right: .5em;
+}
+
+.child-pr-0-5 > * {
+  padding-right: .5em;
+}
+
 .m-0 {
   margin: 0em;
 }
@@ -727,7 +887,7 @@ button:active {
   padding-right: 7em;
 }
 
-/*  usage: Margin and Padding Utility Classes
+/*  usage: Margin and Padding Utility
  *  html: lfkasjdflkasjd*/
 /* Same width Grid */
 .grid-2 {

@@ -1,4 +1,4 @@
-$ems: 0, 1, 2, 3, 4, 5, 6, 7
+$ems: ".2", ".5", "0", "1", "2", "3", "4", "5", "6", "7"
 $directions: "", "-bottom", "-top", "-left", "-right"
 
 /* Paddings and Margins */
@@ -7,21 +7,24 @@ $directions: "", "-bottom", "-top", "-left", "-right"
     @each $dir in $directions 
         
         $dir-in-rule: str-slice($dir, 2, 2)
+        $value-in-rule: $em
+
+        @if str-slice($em, 1, 1) == '.'
+            $value-in-rule: "0-"+str-slice($em, 2)
+
+        .m#{$dir-in-rule}-#{$value-in-rule} 
+            margin#{$dir}: unquote($em) + em
+
+        .child-m#{$dir-in-rule}-#{$value-in-rule} > *
+            margin#{$dir}: unquote($em) + em
         
-        .m#{$dir-in-rule}-#{$em} 
-            margin#{$dir}: $em + em
+        .p#{$dir-in-rule}-#{$value-in-rule} 
+            padding#{$dir}: unquote($em) + em
 
-        .child-m#{$dir-in-rule}-#{$em} > *
-            margin#{$dir}: $em + em
-        
-        .p#{$dir-in-rule}-#{$em} 
-            padding#{$dir}: $em + em
-
-        .child-p#{$dir-in-rule}-#{$em} > *
-            padding#{$dir}: $em + em
-
+        .child-p#{$dir-in-rule}-#{$value-in-rule} > *
+            padding#{$dir}: unquote($em) + em
 
 
 /* 
-    usage: Margin and Padding Utility Classes
+    usage: Margin and Padding Utility
     html: lfkasjdflkasjd*/
