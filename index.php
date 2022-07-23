@@ -71,8 +71,9 @@
                     echo '<h2 class="mb-1 mt-2" id="fsc">SASS Code</h2>';
                     echo '<div class="card p-1 code">' . $content . '</div>';
                 } else {
-                    echo '<h1>Fonce UI</h1>';
+                    include('pages/start.php');
                 } ?>
+                
             </div>
         </div>
         <div class="p-1 background-tertiary child-mb-1">
@@ -85,7 +86,7 @@
             </div>
             <div class="card p-0-5">
                 <h4 class="mb-0-5">Download</h4>
-                <a href="style/style.css" download>style.css</a>
+                <a href="style/style.css" class="text-green" download>style.css</a>
             </div>
 
         </div>
