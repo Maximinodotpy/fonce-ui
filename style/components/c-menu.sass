@@ -1,0 +1,38 @@
+@import "../variables"
+
+[class*="menu"]
+    position: relative
+    display: inline
+    
+    *
+        border-radius: 0
+
+    &:hover
+        background: $main
+
+    .panel
+        display: none
+        min-width: 150%
+        max-width: 400px
+        background-color: $highlight
+        margin: 0
+        position: absolute
+        top: 100%
+        left: 0
+
+    &:hover .panel
+        display: inline
+
+.menu-right .panel
+    left: unset
+    right: 0 !important
+    text-align: right
+
+$dropdown-width-values: 100px, 200px, 300px
+$dropdown-width-names: 'slim', 'normal', 'wide'
+
+$dropdown-widths: zip($dropdown-width-names, $dropdown-width-values)
+
+@each $name, $width in $dropdown-widths
+    .dropdown-#{$name} ul
+        min-width: $width

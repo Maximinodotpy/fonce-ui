@@ -1300,19 +1300,54 @@ h6 {
   display: flex;
 }
 
+/* justify-content */
 .flex-justify-between {
   justify-content: space-between;
+}
+
+.flex-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-justify-around {
+  justify-content: space-around;
+}
+
+.flex-justify-start {
+  justify-content: flex-start;
+}
+
+.flex-justify-end {
+  justify-content: flex-end;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+/* align-items */
+.flex-align-stretch {
+  align-items: stretch;
 }
 
 .flex-align-center {
   align-items: center;
 }
 
-.flex-align-items-start {
+.flex-align-start {
   align-items: flex-start;
 }
 
-.flex-directions-column {
+.flex-align-end {
+  align-items: flex-end;
+}
+
+.flex-align-baseline {
+  align-items: baseline;
+}
+
+/* flex-direction */
+.flex-column {
   flex-direction: column;
 }
 
@@ -1475,6 +1510,54 @@ a:hover {
   border-style: solid;
 }
 
+/* Colors */
+/* Breakpoints */
+/* Border Widths */
+[class*=menu] {
+  position: relative;
+  display: inline;
+}
+[class*=menu] * {
+  border-radius: 0;
+}
+[class*=menu]:hover {
+  background: "main", rgb(45, 45, 45);
+}
+[class*=menu] .panel {
+  display: none;
+  min-width: 150%;
+  max-width: 400px;
+  background-color: "highlight", rgb(56, 95, 194);
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+[class*=menu]:hover .panel {
+  display: inline;
+}
+
+.menu-right .panel {
+  left: unset;
+  right: 0 !important;
+  text-align: right;
+}
+
+.dropdown-slim ul {
+  min-width: 100px;
+}
+
+.dropdown-normal ul {
+  min-width: 200px;
+}
+
+.dropdown-wide ul {
+  min-width: 300px;
+}
+
+/* Colors */
+/* Breakpoints */
+/* Border Widths */
 * {
   box-sizing: border-box;
   color: rgb(240, 240, 240);

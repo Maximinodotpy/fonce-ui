@@ -1,5 +1,6 @@
+<?php class_exists('Template') or exit; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -11,23 +12,25 @@
 </head>
 
 <body class="background-main">
+    
     <div class="container-large">
-        <div class="p-1 background-tertiary sticky-top flex flex-justify-between flex-align-center">
-            <h2>Fonce UI</h2>
-            <div class="menu-right">
-                <button class="hide-at-medium">Menu</button>
-                <div class="background-main panel p-1">
-                    <?php include('nav.php') ?>
-                </div>
-            </div>
+        
+<div class="p-1 background-tertiary sticky-top flex flex-justify-between flex-align-center">
+    <h2>Fonce UI</h2>
+    <div class="menu-right">
+        <button class="hide-at-medium">Menu</button>
+        <div class="background-main panel p-1">
+            <?php include('nav.php') ?>
         </div>
-        <div class="flex align-items-stretch">
-            <div class="width-1-6 appear-at-medium background-secondary p-1">
-                <?php include('nav.php') ?>
-            </div>
+    </div>
+</div>
+<div class="flex align-items-stretch">
+    <div class="width-1-6 appear-at-medium background-secondary p-1">
+        <?php include('nav.php') ?>
+    </div>
 
-            <div class="background-highlight flex-expand p-1">
-                <?php
+    <div class="background-highlight flex-expand p-1">
+        <?php
 
 
                 if (isset($_GET['c'])) {
@@ -43,7 +46,9 @@
                     fclose($myfile);
 
                     $printable = ['usage'];
-                    $infos = array();
+                    $infos = array(
+    
+                    );
 
                     foreach ($printable as $key => $value) {
                         preg_match('/' . $value . ':(.*)\b/', $content, $re);
@@ -53,7 +58,9 @@
                                 $infos[$value] = $re[1];
                             }
                         } catch (Exception $e) {
+
                         }
+
                     }
 
 
@@ -61,7 +68,8 @@
 
                     if (isset($infos['usage'])) {
                         echo '<span>' . $infos['usage'] . '</span>';
-                    } else {
+                    }
+                    else {
                         echo '<span>There Are no Informations available about this component.</span>';
                     }
 
@@ -73,27 +81,32 @@
                 } else {
                     echo '<h1>Fonce UI</h1>';
                 } ?>
-            </div>
-        </div>
-        <div class="p-1 background-tertiary child-mb-1">
-            <h3>How to Get Fonce UI</h3>
-            <div class="card p-0-5">
-                <h4 class="mb-0-5">CDN</h4>
-                <code>
+    </div>
+</div>
+<div class="p-1 background-tertiary child-mb-1">
+    <h3>How to Get Fonce UI</h3>
+    <div class="card p-0-5">
+        <h4 class="mb-0-5">CDN</h4>
+        <code>
                     &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Maximinodotpy/fonce-ui@latest/style/style.css"&gt;
                 </code>
-            </div>
-            <div class="card p-0-5">
-                <h4 class="mb-0-5">Download</h4>
-                <a href="style/style.css" download>style.css</a>
-            </div>
+    </div>
+    <div class="card p-0-5">
+        <h4 class="mb-0-5">Download</h4>
+        <a href="style/style.css" download>style.css</a>
+    </div>
 
-        </div>
-        <div class="text-center mt-2 pb-2">
-            Made By <a href="https://maximmaeder.com/" target="_blank" class="text-green">Maxim Maeder</a>
-        </div>
+</div>
+<div class="text-center mt-2">
+    Made By
+    <a href="https://maximmaeder.com/" target="_blank" class="text-green">Maxim Maeder</a>
+</div>
+
     </div>
 
 </body>
 
 </html>
+
+
+
