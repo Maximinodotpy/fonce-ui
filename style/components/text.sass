@@ -1,0 +1,12 @@
+@import "../variables"
+
+@each $name, $value in $colors
+    .text-#{$name}
+        color: $value
+
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+.text-left
+    text-align: left

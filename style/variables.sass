@@ -1,15 +1,30 @@
-$color-names: 'main', 'secondary', 'highlight', 'tertiary'
-$color-values: rgb(45, 45, 45), rgb(66, 66, 66), rgb(56, 95, 194), rgb(77, 77, 77)
-$colors: zip($color-names, $color-values)
 
+/* Colors */
+$main:      "main",         rgb(45, 45, 45)
+$secondary: "secondary",    rgb(66, 66, 66)
+$tertiary:  "tertiary",     rgb(77, 77, 77)
+$highlight: "highlight",    rgb(56, 95, 194)
+
+$red:       "red",          rgb(234, 97, 97)
+$blue:      "blue",         rgb(95, 211, 234)
+$orange:    "orange",       rgb(234, 162, 95)
+$green:     "green",        rgb(95, 234, 165)
+
+$white:     "white",        rgb(255, 255, 255)
+$black:     "black",        rgb(0, 0, 0)
+
+$colors: $main, $secondary, $tertiary, $highlight, $red, $blue, $orange, $green 
 
 /* Breakpoints */
-$small: 600
-$medium: 768
-$large: 992
-$xlarge: 1200
+$small:     600
+$medium:    768
+$large:     992
+$xlarge:    1200
 
 $breakpoint-values: $small, $medium, $large, $xlarge
 $breakpoint-names: "small", "medium", "large", "xlarge"
 
 $breakpoints: zip($breakpoint-names, $breakpoint-values)
+
+/* Border Widths */
+$border-widths: 0, 1, 2, 3, 4, 5, 10

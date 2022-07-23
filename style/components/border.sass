@@ -1,0 +1,12 @@
+@import "../variables"
+
+@each $name, $value in $colors
+    .border-#{$name}
+        border-color: $value
+
+@each $width in $border-widths
+    .border-width-#{$width}
+        border-width: $width + 0px
+
+[class*="border"]
+    border-style: solid

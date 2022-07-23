@@ -17,7 +17,7 @@
         </div>
         <div class="flex child-p-1">
             <div class="background-secondary width-1-6 appear-at-medium">
-                <h6 class="mb-1">Components</h6>
+                <h6 class="mb-0-5">Components</h6>
                 <ul class="child-mb-0-2">
                     <?php
 
@@ -27,18 +27,18 @@
                     foreach ($dir as $key => $value) {
                         $name = ucfirst(explode('.', $value)[0]);
 
-                        echo '<li><a href="index.php?component=' . $value . '">' . $name . '</a></li>';
+                        echo '<li><a href="index.php?c=' . $value . '">' . $name . '</a></li>';
                     }
 
                     ?>
                 </ul>
-                <h6 class="mb-1 mt-2">Document</h6>
+                <h6 class="mb-0-5 mt-1">Document</h6>
                 <ul class="child-mb-0-2">
                     <li><a href="">Usage</a></li>
                     <li><a href="">Classes</a></li>
-                    <li><a href="#fsc">Full SASS Code</a></li>
+                    <li><a href="#fsc">SASS Code</a></li>
                 </ul>
-                <h6 class="mb-1 mt-2">Other</h6>
+                <h6 class="mb-0-5 mt-1">Other</h6>
                 <ul class="child-mb-0-2">
                     <li><a target="_blank" href="https://github.com/Maximinodotpy/fonce-ui">GitHub</a></li>
                 </ul>
@@ -47,49 +47,73 @@
                 <?php
 
 
-                if (isset($_GET['component'])) {
-                    $name = ucfirst(explode('.', $_GET['component'])[0]);
+                if (isset($_GET['c'])) {
+                    $name = ucfirst(explode('.', $_GET['c'])[0]);
 
                     echo '<h1 class="mb-1">' . $name . '</h1>';
 
                     /* Open File */
-                    $path = 'style/components/' . $_GET['component'];
+                    $path = 'style/components/' . $_GET['c'];
 
                     $myfile = fopen($path, "r") or die("Unable to open file!");
                     $content = fread($myfile, filesize($path));
                     fclose($myfile);
 
                     $printable = ['usage'];
-                    $infos = [];
+                    $infos = array(
+    
+                    );
 
                     foreach ($printable as $key => $value) {
                         preg_match('/' . $value . ':(.*)\b/', $content, $re);
 
-                        $infos[$value] = $re[1];
+                        try {
+                            if (isset($re[1])) {
+                                $infos[$value] = $re[1];
+                            }
+                        } catch (Exception $e) {
+
+                        }
+
                     }
 
+
                     echo '<h2 class="mb-1">About</h2>';
-                    echo '<span>' . $infos['usage'] . '</span>';
+
+                    if (isset($infos['usage'])) {
+                        echo '<span>' . $infos['usage'] . '</span>';
+                    }
+                    else {
+                        echo '<span>There Are no Informations available about this component.</span>';
+                    }
 
                     'nodemon -x sass style/style.sass style/style.css';
 
                     /* Full SASS Code */
-                    echo '<h2 class="mb-1 mt-2" id="fsc">Full SASS Code</h2>';
+                    echo '<h2 class="mb-1 mt-2" id="fsc">SASS Code</h2>';
                     echo '<div class="card p-1 code">' . $content . '</div>';
                 } else {
                     echo '<h1>Fonce UI</h1>';
                 } ?>
             </div>
         </div>
-        <div class="p-1 background-tertiary">
-            Made By Maxim Maeder
-
-            <div>
+        <div class="p-1 background-tertiary child-mb-1">
+            <h3>How to Get Fonce UI</h3>
+            <div class="card p-0-5">
+                <h4 class="mb-0-5">CDN</h4>
                 <code>
-                https://cdn.jsdelivr.net/gh/Maximinodotpy/fonce-ui@latest/style/style.css
+                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Maximinodotpy/fonce-ui@latest/style/style.css"&gt;
                 </code>
             </div>
-
+            <div class="card p-0-5">
+                <h4 class="mb-0-5">Download</h4>
+                <a href="style/style.css" download>style.css</a>
+            </div>
+            
+        </div>
+        <div class="text-center mt-2">
+        Made By 
+        <a href="https://maximmaeder.com/" target="_blank" class="text-green">Maxim Maeder</a>
         </div>
     </div>
 

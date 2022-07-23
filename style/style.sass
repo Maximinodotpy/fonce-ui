@@ -11,6 +11,8 @@
 @use "components/flex"
 @use "components/width"
 @use "components/link"
+@use "components/text"
+@use "components/border"
 
 
 *
@@ -20,12 +22,14 @@
 :not(pre)
     font-family: 'Segoe UI', sans-serif
 
-.code, code, pre
+.code, pre
     font-family: monospace
     max-width: 100%
     overflow-x: auto
     white-space: pre-wrap
-    
+
+code
+    font-family: monospace
 
 
 body

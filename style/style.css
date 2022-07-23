@@ -67,7 +67,9 @@ button:active {
 
 /*  usage: You dont have to use anything, the rules make your buttons nice.
  *  html: lfkasjdflkasjd*/
+/* Colors */
 /* Breakpoints */
+/* Border Widths */
 .background-main {
   background-color: rgb(45, 45, 45);
 }
@@ -76,12 +78,28 @@ button:active {
   background-color: rgb(66, 66, 66);
 }
 
+.background-tertiary {
+  background-color: rgb(77, 77, 77);
+}
+
 .background-highlight {
   background-color: rgb(56, 95, 194);
 }
 
-.background-tertiary {
-  background-color: rgb(77, 77, 77);
+.background-red {
+  background-color: rgb(234, 97, 97);
+}
+
+.background-blue {
+  background-color: rgb(95, 211, 234);
+}
+
+.background-orange {
+  background-color: rgb(234, 162, 95);
+}
+
+.background-green {
+  background-color: rgb(95, 234, 165);
 }
 
 /*  usage: Change the Background with these classes.
@@ -1062,7 +1080,9 @@ h6 {
 
 /*  usage: Header are being Sized
  *  html: lfkasjdflkasjd*/
+/* Colors */
 /* Breakpoints */
+/* Border Widths */
 .container-small {
   padding: 1em;
   max-width: 600px;
@@ -1126,7 +1146,9 @@ h6 {
 
 /*  usage: Position Utility Class + Sticky Top for easy sticky headers
  *  html: lfkasjdflkasjd*/
+/* Colors */
 /* Breakpoints */
+/* Border Widths */
 /* Disappear */
 /* Switch at class */
 @media (min-width: 600px) {
@@ -1334,10 +1356,125 @@ a {
 a:hover {
   text-decoration: underline;
   border-radius: 5px;
+  text-decoration-thickness: 5;
 }
 
 /*  usage: The links are styled
  *  html: lfkasjdflkasjd*/
+/* Colors */
+/* Breakpoints */
+/* Border Widths */
+.text-main {
+  color: rgb(45, 45, 45);
+}
+
+.text-secondary {
+  color: rgb(66, 66, 66);
+}
+
+.text-tertiary {
+  color: rgb(77, 77, 77);
+}
+
+.text-highlight {
+  color: rgb(56, 95, 194);
+}
+
+.text-red {
+  color: rgb(234, 97, 97);
+}
+
+.text-blue {
+  color: rgb(95, 211, 234);
+}
+
+.text-orange {
+  color: rgb(234, 162, 95);
+}
+
+.text-green {
+  color: rgb(95, 234, 165);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Colors */
+/* Breakpoints */
+/* Border Widths */
+.border-main {
+  border-color: rgb(45, 45, 45);
+}
+
+.border-secondary {
+  border-color: rgb(66, 66, 66);
+}
+
+.border-tertiary {
+  border-color: rgb(77, 77, 77);
+}
+
+.border-highlight {
+  border-color: rgb(56, 95, 194);
+}
+
+.border-red {
+  border-color: rgb(234, 97, 97);
+}
+
+.border-blue {
+  border-color: rgb(95, 211, 234);
+}
+
+.border-orange {
+  border-color: rgb(234, 162, 95);
+}
+
+.border-green {
+  border-color: rgb(95, 234, 165);
+}
+
+.border-width-0 {
+  border-width: 0px;
+}
+
+.border-width-1 {
+  border-width: 1px;
+}
+
+.border-width-2 {
+  border-width: 2px;
+}
+
+.border-width-3 {
+  border-width: 3px;
+}
+
+.border-width-4 {
+  border-width: 4px;
+}
+
+.border-width-5 {
+  border-width: 5px;
+}
+
+.border-width-10 {
+  border-width: 10px;
+}
+
+[class*=border] {
+  border-style: solid;
+}
+
 * {
   box-sizing: border-box;
   color: rgb(240, 240, 240);
@@ -1347,11 +1484,15 @@ a:hover {
   font-family: "Segoe UI", sans-serif;
 }
 
-.code, code, pre {
+.code, pre {
   font-family: monospace;
   max-width: 100%;
   overflow-x: auto;
   white-space: pre-wrap;
+}
+
+code {
+  font-family: monospace;
 }
 
 body {
