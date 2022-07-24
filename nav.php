@@ -1,5 +1,8 @@
 <h6><a class="text-green" href="index.php">Home</a></h6>
 
+<div>
+
+
 <?php
 
 $dir = scandir('style/components');
@@ -20,7 +23,12 @@ foreach ($groups as $_ => $group) {
         if (substr($value, 0, 1) == $group[1]) {
             $name = ucfirst(explode('.', explode('-', $value)[1])[0]);
 
-            echo '<li><a class="text-green" href="index.php?c=' . $value . '">' . $name . '</a></li>';
+            $docExists = '';
+            if (file_exists('docs/'.$value.'.php') == true) {
+                $docExists = '&#10003;';
+            }
+
+            echo '<li class="flex flex-justify-between"><a class="text-green" href="index.php?c=' . $value . '">' . $name . '</a><span class="text-red">'.$docExists.'</span></li>';
         }
     }
     echo '</ul>';
@@ -28,6 +36,8 @@ foreach ($groups as $_ => $group) {
 
 
 ?>
+
+</div>
 
 <!--   <h6 class="mb-0-5 mt-1">Document</h6>
     <ul class="child-mb-0-2">

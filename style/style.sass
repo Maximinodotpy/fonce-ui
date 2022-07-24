@@ -1,5 +1,8 @@
 @use "components/s-reset"
 @use "components/s-button"
+@use "components/s-table"
+@use "components/s-link"
+
 @use "components/u-background"
 @use "components/l-marpad"
 @use "components/l-grid"
@@ -10,7 +13,6 @@
 @use "components/l-hideappear"
 @use "components/l-flex"
 @use "components/l-width"
-@use "components/s-link"
 @use "components/u-text"
 @use "components/u-border"
 @use "components/c-menu"
@@ -25,7 +27,7 @@
 :not(pre)
     font-family: 'Segoe UI', sans-serif
 
-.code, pre
+.code, pre, [data-html-codes]
     font-family: monospace
     max-width: 100%
     overflow-x: auto
@@ -40,3 +42,18 @@ body
 
 p
     margin: 1em 0 1em 0
+
+
+
+[data-html-codes]
+    resize: none
+    width: 100%
+    border: none
+    background-color: nth($main, 2)
+    padding: 1em
+    min-height: 50px
+    height: 100%
+    display: block
+
+[str]
+    color: rgb(234, 162, 95) !important

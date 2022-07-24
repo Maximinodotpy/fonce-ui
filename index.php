@@ -42,7 +42,7 @@
                     $content = fread($myfile, filesize($path));
                     fclose($myfile);
 
-                    $printable = ['usage'];
+                    /* $printable = ['usage'];
                     $infos = array();
 
                     foreach ($printable as $key => $value) {
@@ -63,9 +63,14 @@
                         echo '<span>' . $infos['usage'] . '</span>';
                     } else {
                         echo '<span>There Are no Informations available about this component.</span>';
-                    }
+                    } */
 
-                    'nodemon -x sass style/style.sass style/style.css';
+
+                    if (file_exists('docs/'.$_GET['c'].'.php') == true) {
+                        include('docs/'.$_GET['c'].'.php');
+                    }
+                    
+
 
                     /* Full SASS Code */
                     echo '<h2 class="mb-1 mt-2" id="fsc">SASS Code</h2>';
@@ -94,7 +99,8 @@
             Made By <a href="https://maximmaeder.com/" target="_blank" class="text-green">Maxim Maeder</a>
         </div>
     </div>
-
+            
+    <script src="app.js"></script>
 </body>
 
 </html>

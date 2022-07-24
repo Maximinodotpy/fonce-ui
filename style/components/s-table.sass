@@ -1,0 +1,17 @@
+@import "../variables"
+    
+td, th
+    padding: 0.5em
+
+th
+    background-color: nth($main, 2)
+
+tr:nth-child(odd)
+    background-color: nth($secondary, 2)
+tr:nth-child(even)
+    background-color: nth($tertiary, 2)
+
+table
+    max-width: 100%
+    width: 100%
+    text-align: left
